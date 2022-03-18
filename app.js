@@ -11,7 +11,15 @@ import momentZone from 'moment-timezone';
 const app = express();
 
 
+const client = new pg.Client({
+    user: 'postgres',
+    host: '172.16.117.193',
+    database: 'Wether_test',
+    password: '1234',
+    port: 5432,
+});
 
+client.connect();
 
 
 const { PORT = 3030 } = process.env;
