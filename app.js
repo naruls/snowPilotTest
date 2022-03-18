@@ -14,7 +14,7 @@ const app = express();
 
 
 
-const { PORT = 3033 } = process.env;
+const { PORT = 3030 } = process.env;
 
 
 function fetchSnowpilotData(){
