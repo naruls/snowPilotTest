@@ -41,7 +41,7 @@ axios.get('https://snowpilot.org/snowpit/41484/download/xml', {
     console.log(endJsonData.Pit_Observation.Shear_Test_Result[i]._attributes.code)
     let currentTime = momentZone().tz("Europe/Moscow").format();
     const query = `
-      INSERT INTO snowpilot_test_data (code, sdepth, depthUnits, score, ecScore, ctScore, quality, dateString, numberOfTaps, fractureCat, fractureCharacter, lengthOfCut, lengthOfColumn, releaseType, dataCode, time)
+      INSERT INTO snowpilot_test_data (code, sdepth, depthunits, score, ecscore, ctscore, quality, datestring, numberoftaps, fracturecat, fracturecharacter, lengthofcut, lengthofcolumn, releasetype, datacode, time)
       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16) returning *
     `;
     client.query(query, [
